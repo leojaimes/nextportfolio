@@ -35,17 +35,21 @@ npx eslint .
 
 
 # Editor format on save true settings.json ctrl + shitf + p then settings
+   "editor.defaultFormatter": "esbenp.prettier-vscode"
+   adicional se debe agregar el  .prettierrc.json
 
+   
+````
 {
     "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[javascript]": {
-        
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+      "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[javascriptreact]": {
-      "editor.formatOnSave": true,
+
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "workbench.iconTheme": "vscode-icons",
@@ -99,3 +103,44 @@ npx eslint .
     "editor.defaultFormatter": "lonefy.vscode-JS-CSS-HTML-formatter"
   }
 }
+````
+# Configuración de eslint:
+
+````
+const RULES = {
+  OFF: 'off',
+  WARN: 'warn',
+  ERROR: 'error'
+}
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    node: true
+  },
+  extends: [
+    'standard',
+    'plugin:react/recommended'
+  ],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    },
+    ecmaVersion: 13,
+    sourceType: 'module'
+  },
+  plugins: [
+    'react'
+  ],
+  rules: {
+    'react/react-in-jsx-scope': RULES.OFF,
+    'no-unused-vars': RULES.WARN
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  }
+}
+
+````
