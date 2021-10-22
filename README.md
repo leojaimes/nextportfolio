@@ -38,7 +38,7 @@ npx eslint .
    "editor.defaultFormatter": "esbenp.prettier-vscode"
    adicional se debe agregar el  .prettierrc.json
 
-   
+
 ````
 {
     "[typescript]": {
@@ -144,3 +144,21 @@ module.exports = {
 }
 
 ````
+
+
+
+# Creando tags
+
+````
+git tag "prettier-eslint-config"
+git describe --tags
+git push origin --tags
+````
+
+# Instalar husky
+
+Cuando queremos comitear pasa eslint y prettier en el orden correcto.
+````
+npx mrm lint-staged
+````
+Husky sirve para no dejar subir codigo sucio o con errores.
