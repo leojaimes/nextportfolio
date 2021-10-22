@@ -1,0 +1,26 @@
+{
+  "name": "nextportfolio",
+  "version": "1.0.0",
+  "description": "Leo Portfolio Next JS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start"
+  },
+  "keywords": [
+    "Leo",
+    "Portfolio",
+    "Next",
+    "JS"
+  ],
+  "author": "Leonardo Jaimes Estévez",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^11.1.2",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
